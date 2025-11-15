@@ -2,7 +2,11 @@ import { } from 'react-native'
 import React from 'react'
 
 import AuthNavigator from "./AuthNavigator";
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import PatientNavigator from './PatientNavigator';
+import DoctorNavigator from './DoctorNavigator';
+import AdminNavigator from './AdminNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,6 +14,9 @@ const AppNavigator = () => {
   return (
 <Stack.Navigator screenOptions={{ headerShown: false }}>
   <Stack.Screen name="Auth" component={AuthNavigator} />
+  <Stack.Screen name="Patient" component={PatientNavigator} />
+      <Stack.Screen name="Doctor" component={DoctorNavigator} />
+      <Stack.Screen name="Admin" component={AdminNavigator} />
 </Stack.Navigator>
 
   )

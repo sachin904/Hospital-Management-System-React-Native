@@ -1,0 +1,28 @@
+{
+  "Users": [
+    {
+      "id": "1",
+      "Fullname": "sachin kumar",
+      "email": "sachin@gmail.com",
+      "Username": "sachin",
+      "password": "sachin12",
+      "userType": "Doctor"
+    },
+    {
+      "id": "2",
+      "Fullname": "Sachin kumar",
+      "email": "sachin1@gmail.com",
+      "Username": "Sachin1",
+      "password": "Sachin",
+      "userType": "Patient"
+    },
+    {
+      "id": 1,
+      "Fullname": "Sanjeet",
+      "email": "sanjeet@gmail.com",
+      "Username": "sanjeet",
+      "password": "Sanjeet",
+      "userType": "Doctor"
+    }
+  ]
+}

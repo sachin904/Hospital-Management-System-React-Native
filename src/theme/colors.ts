@@ -9,4 +9,5 @@ export const colors={
         text:"#fff",
         primary:"#5DADE2"
     },
+    selected:"#2E86DE"
 };
