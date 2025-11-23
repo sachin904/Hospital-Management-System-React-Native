@@ -12,6 +12,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import AppNavigator from './navigation/AppNavigator';
 import { colors } from './theme/colors';
 import PatientProfile from './screens/patient/PatientProfile';
+import BookAppointments from './screens/patient/BookAppointments';
+import PatientHomeScreen from './screens/patient/PatientHomeScreen';
 
 function App() {
   
@@ -20,10 +22,11 @@ const theme =  isDarkMode ? colors.dark : colors.light;
   return (
     <SafeAreaProvider>
        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-{       
+{      
           <NavigationContainer>
             <AppNavigator/>
             </NavigationContainer> }
+         
        
     </SafeAreaProvider>
   );

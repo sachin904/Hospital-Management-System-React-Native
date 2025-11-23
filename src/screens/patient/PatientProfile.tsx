@@ -5,11 +5,13 @@ import InfoBox from '../../components/InfoBox'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import PatientDashboard from './PatientDetails'
 import AppointmentDetails from './Reports'
-import { NavigationContainer } from '@react-navigation/native'
+
+
+
 
 const PatientProfile = () => {
  
-
+    
     const Tab = createMaterialTopTabNavigator();
   return(
   <SafeAreaView style={styles.container}>

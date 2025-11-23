@@ -8,7 +8,15 @@ import PatientNavigator from './PatientNavigator';
 import DoctorNavigator from './DoctorNavigator';
 import AdminNavigator from './AdminNavigator';
 
-const Stack = createNativeStackNavigator();
+export type AppStackParamList = {
+  Auth: undefined;
+  Patient: { username: string };
+  Doctor: undefined;
+  Admin: undefined;
+};
+
+
+const Stack = createNativeStackNavigator<AppStackParamList>();
 
 const AppNavigator = () => {
   return (

@@ -7,15 +7,22 @@ import PatientDashboard from '../screens/patient/PatientDetails'
 import MyAppointments from '../screens/patient/MyAppointments'
 import BookAppointments from '../screens/patient/BookAppointments'
 import AppointmentDetails from '../screens/doctor/AppointmentDetails'
+import PatientHomeScreen from '../screens/patient/PatientHomeScreen'
+import { RouteProp } from "@react-navigation/native";
+import { AppStackParamList } from "./AppNavigator";
 
-const PatientNavigator = () => {
-   
+type PatientNavRouteProp = RouteProp<AppStackParamList, "Patient">;
+
+const PatientNavigator = ({ route }: { route: PatientNavRouteProp }) => {
+   const { username } = route.params;
     const Stack = createNativeStackNavigator();
 
   return (
-    <Stack.Navigator initialRouteName='PatientProfile'>
+    <Stack.Navigator initialRouteName='PatientHomeScreen'>
         <Stack.Screen  name="PatientProfile" component={PatientProfile} options={{title:"Patient Profile", headerTitleAlign:"center"}}/>
-         <Stack.Screen  name="PatientDashboard" component={PatientDashboard}/>
+         <Stack.Screen  name="PatientHomeScreen"  options={{headerShown:false}}>
+             {(props) => <PatientHomeScreen {...props} username={username} />}
+         </Stack.Screen>
           <Stack.Screen  name="MyAppointments" component={MyAppointments}/>
            <Stack.Screen  name="BookAppointments" component={BookAppointments}/>
             <Stack.Screen  name="AppointmentDetails" component={AppointmentDetails}/>

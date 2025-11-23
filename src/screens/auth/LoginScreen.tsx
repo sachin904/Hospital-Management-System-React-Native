@@ -5,6 +5,11 @@ import { colors } from '../../theme/colors'
 import { Link, useNavigation } from '@react-navigation/native';
 import { data } from '../../types/data';
 import TypeSelector from '../../components/TypeSelector';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AppStackParamList } from '../../navigation/AppNavigator';
+
+type LoginNavProp = NativeStackNavigationProp<AppStackParamList, "Auth">;
+
 
 enum userType{
   Doctor = "Doctor",
@@ -20,7 +25,7 @@ const LoginScreen = () => {
   const [Data, setData] = useState<data[]>([]);
    const [Type,setUsertype] = useState(userType.Patient);
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<LoginNavProp>();
 
 
 
@@ -43,7 +48,7 @@ const LoginScreen = () => {
 
   }, [])
 
-  console.log(Data);
+  console.log();
 
   const loginUser = async () => {
      if( !Username || !password){
@@ -51,11 +56,12 @@ const LoginScreen = () => {
         return;
      }
 
-     const ValidUser =  Data.some( (u)=> u.Username===Username && u.password===password && u.userType===Type);
+     const ValidUser =  Data.find( (u)=> u.Username===Username && u.password===password && u.userType===Type);
 
      if(ValidUser){
       Alert.alert("Logged in");
-      navigation.navigate("Patient" as never);
+      navigation.navigate("Patient",{ username: ValidUser.Fullname} );
+
      }
      else{
       Alert.alert("inavlid credentials!");

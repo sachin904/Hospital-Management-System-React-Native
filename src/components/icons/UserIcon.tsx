@@ -5,7 +5,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 const UserIcon = () => {
   return (
     <>
-     <FontAwesomeIcon icon={faUser} />
+     <FontAwesomeIcon icon={faUser} color='#0c6bfaff' />
     </>
   )
 }

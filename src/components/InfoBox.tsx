@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Calendar from './icons/Calendar'
+import Calendar from './icons/CalendarIcon'
 import UserIcon from './icons/UserIcon'
 import DropletIcon from './icons/DropletIcon'
 import ClockIcon from './icons/ClockIcon'

@@ -4,9 +4,9 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 const InfoIcon = () => {
   return (
     <>
-     <FontAwesomeIcon icon={faInfoCircle} color='#3877e4ff' />
+     <FontAwesomeIcon icon={faInfoCircle} color='#3877e4ff'  />
     </>
   )
 }
 
-export default InfoIcon
+export default InfoIcon 
